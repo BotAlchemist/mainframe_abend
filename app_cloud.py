@@ -59,7 +59,7 @@ else:
     
                     # Open the HTML file and display it within the Streamlit app
                     HtmlFile = open(output_file, 'r', encoding='utf-8')
-                    components.html(HtmlFile.read(), height=1000)
+                    components.html(HtmlFile.read(), height=1000, width=1500)
     
     # Case 2: User chooses to directly input text
     else:
@@ -80,6 +80,7 @@ else:
                 # Open the HTML file and display it within the Streamlit app
                 HtmlFile = open(output_file, 'r', encoding='utf-8')
                 components.html(HtmlFile.read(), height=1000, width=1500)
+
 
 
 
