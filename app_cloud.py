@@ -21,7 +21,7 @@ st.title("Knowledge Graph From Text")
 
 
 # Password input
-user_password = st.text_input("Enter AWS Secret Password", type="password")
+user_password = st.sidebar.text_input("Enter Password", type="password")
 
 if user_password != password:
     st.error("Please enter correct password")
@@ -80,4 +80,5 @@ else:
                 # Open the HTML file and display it within the Streamlit app
                 HtmlFile = open(output_file, 'r', encoding='utf-8')
                 components.html(HtmlFile.read(), height=1000)
+
 
