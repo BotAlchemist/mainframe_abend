@@ -13,6 +13,7 @@ load_dotenv()
 # Get API key from environment variable
 api_key = os.getenv("OPENAI_API_KEY")
 
+
 llm = ChatOpenAI(temperature=0, model_name="gpt-4o")
 
 graph_transformer = LLMGraphTransformer(llm=llm)
@@ -125,3 +126,4 @@ def generate_knowledge_graph(text):
     graph_documents = asyncio.run(extract_graph_data(text))
     net = visualize_graph(graph_documents)
     return net
+
